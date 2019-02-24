@@ -1,7 +1,7 @@
 # Intro to Docker
 
 <img src="./images/docker.png" align="right"
-     title="Docker" width="50%" height="50%">
+     title="Docker" width="25%" height="25%"/>
 
 A brief introduction to Docker.  Very high level, designed for beginners.  Here's what we'll cover:
 - Before containers
@@ -13,6 +13,8 @@ A brief introduction to Docker.  Very high level, designed for beginners.  Here'
 - Deploy to Heroku
 - Docker Compose
 - Orchestration
+<br/><br/>
+<br/><br/>
 
 ## Before containers
 
@@ -21,13 +23,14 @@ A brief introduction to Docker.  Very high level, designed for beginners.  Here'
 We've spent millions on hardware but it's normally running at 10% utilization.
 - Virtual machines made it much easier to better utilize large servers.  But they still had the overhead that each VM had to run it's own operating system.
 - Containers allow you to package only what you need to run your app. 
+<br/><br/>
+
 
 <p  align="center">
     <img src="./images/traditional-2-containers.png" alt="Traditional Servers to Containers"
-       width="80%" height="80%">
-    </img>
+       width="80%" height="80%"/>
 </p>
-
+<br/><br/>
 
 ## What is Docker
 <img src="./images/docker.png" align="right"
@@ -36,6 +39,7 @@ We've spent millions on hardware but it's normally running at 10% utilization.
 - A tool that makes it easy to create, deploy, and run containers.  
 - Bundles an application with all of it’s dependencies into a single self contained package.
 - Always runs the same way in any environment.
+<br/><br/><br/><br/>
 
 ## Why we like it
 - Build and test the same way on your laptop as in the cloud.
@@ -44,12 +48,33 @@ We've spent millions on hardware but it's normally running at 10% utilization.
 - Portable, easy to move across cloud vendors.
 - Easy to connect containers together so that you can abstract dependencies to other services.
 - Well suited for cloud, microservices and continuous delivery.
+<br/><br/><br/><br/>
+
+
 
 ## How it works
+<img src="./images/how-it-works.png" align="right"
+     title="Docker" width="50%" height="50%"/>
+- **Docker Image**\
+  application package
+- **Docker Container**\
+  running application instance
+- **Docker Engine**\
+  build images and run containers
+- **Registry**\
+  stores your images
+<br/><br/><br/><br/>
 
 ## Dockerfile
+The Dockerfile is the spec for building the image.  
+<p align="center">
+<img src="./images/Dockerfile.png" 
+     title="Docker" width="90%" height="90%"/>
+</p>
 
+<br/><br/>
 ## Build and run a container
+<br/><br/>
 ## Deploy to Heroku
 Now that we've build our first Docker container, it is easy to deploy it anywhere.  Here are steps to deploy it to Heroku.
 
@@ -94,6 +119,27 @@ Cleanup
 ```
 heroku destroy --app jimareed-restapi
 ```
+<br/><br/>
+
 ## Docker Compose
+Lets you build and deploy multi-container applications.  Here's an example from https://github.com/dockersamples/example-voting-app
+
+<p align="center">
+<img src="./images/docker-compose.png" 
+     title="Docker" width="90%" height="90%"/>
+</p>
+<br/><br/>
+
+
 ## Orchestration
+<img src="./images/kubernetes.png" align="right"
+     title="Kubernetes" width="15%" height="15%"/>
+<img src="./images/docker-swarm.png" align="right"
+     title="Docker Swarm" width="15%" height="15%"/>
+
+- container management systems
+- Effectively organizes a group of containers across a set of servers
+- Makes sure containers stay up, simplifies their management in production
+
+
 
